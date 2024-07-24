@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>James Henry</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>James Henry</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am pursuing a Bachelor of Science in Computer Engineering from California State University, Long Beach, with an expected 
+        graduation date of May 2025. I am proficient in various programming languages, including C++,
+        Python, Java, and Verilog. Additionally, I have hands-on experience with PLC programming, LeetCode, and a solid background 
+        in sales. I also enjoy gaming, hiking, photography, video editing and modeling in my free time.</p>
+    </section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3 onclick="toggleProject(this)">Project 1</h3>
+            <div class="project-details">
+                <img src="PlanetSimSS.png" alt="Project 1">
+                <p><a href="https://j3meshenry.github.io/jamesplanetsim/jamesplanetsim.html" target="_blank">View Planet Simulator</a></p>
+            </div>
+        </div>
+        <div class="project">
+            <h3 onclick="toggleProject(this)">Analog Line-Following-Robot</h3>
+            <div class="project-details">
+                <img src="linefollow.jpg" alt="Project 2">
+                <p>Designed a 100% analog line-follower. It uses dual photoresistors, mosfet transistors, and 
+                an h-bridge to control the direction and speed of the DC motors.</p>
+            </div>
+        </div>
+        <div class="project">
+            <h3 onclick="toggleProject(this)">Smart Car</h3>
+            <div class="project-details">
+                <img src="smartcar.jpg" alt="Project 3">
+                <p>Designed a smart car using IR Sensors, Stepper Motors, a power supply circuit made of capacitors
+                to smooth the noisy voltage signals, and TM4C Microcontroller programming in C. The line functions similar to a 
+                micromouse and avoids hitting walls.</p>
+            </div>
+        </div>
+        <div class="project">
+            <h3 onclick="toggleProject(this)">Etch-a-Sketch</h3>
+            <div class="project-details">
+                <div class="project-images">
+                    <img src="etchcontroller.jpg" alt="Project 4">
+                    <img src="etchdrawing.jpg" alt="Project 4">
+                </div>
+                <p>Recreated Etch-a-Sketch (the classical drawing game), by creating a custom controller made of rotary encoders and resistors, 
+                Nexy's A7-100T FPGA Board, Verilog Programming, and a VGA cable to output it to the monitor.</p>
+            </div>
+        </div>
+        <div class="project">
+            <h3 onclick="toggleProject(this)">Banking Simulator</h3>
+            <div class="project-details">
+                <img src="Screenshot 2024-05-15 230657.png" alt="Project 5">
+                <p>Designed a banking simulator that gives users options to create accounts of many different types. It uses
+                Luhn's Algorithm to distinguish between real and fake credit cards. This simulator also shows expertise in 
+                Data Structures and Algorithms using C programming.</p>
+            </div>
+        </div>
+        <div class="project">
+            <h3 onclick="toggleProject(this)">Infinity Mirror</h3>
+            <div class="project-details">
+                <img src="infinitymirror.jpg" alt="Project 6">
+                <p>Created and designed an infinity mirror using white pine wood, stain, LED strips, an acrylic mirror to
+                replicate the infinite effect, a 6.5V battery pack to power the mirror, and current-limiting resistors.</p>
+            </div>
+        </div>
+        <div class="project">
+            <h3 onclick="toggleProject(this)">Clock</h3>
+            <div class="project-details">
+                <img src="clock.jpg" alt="Project 7">
+                <p>I designed a clock using white pine wood, stain, aluminum arms, internal circuitry and a 6v battery pack. 
+                This project taught me a lot about cost efficiency, design and how analog circuits work in the world of engineering.</p>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <div class="contact-icons">
+            <a href="mailto:jameshenry482@gmail.com" class="contact-icon" title="Email">
+                <img src="gmail.jpg" alt="Email">
+            </a>
+            <a href="https://www.linkedin.com/in/james-henry-05291a1aa/" class="contact-icon" title="LinkedIn" target="_blank">
+                <img src="linkedin.png" alt="LinkedIn">
+            </a>
+            <a href="https://github.com/j3meshenry" class="contact-icon" title="GitHub" target="_blank">
+                <img src="github.png" alt="GitHub">
+            </a>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 James Henry</p>
+    </footer>
+    <script>
+        function toggleProject(element) {
+            const projectDetails = element.nextElementSibling;
+            projectDetails.classList.toggle('expanded');
+        }
+    </script>
+</body>
+</html>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding: 2rem;
+    max-width: 800px;
+    margin: auto;
+}
+
+.project {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    transition: max-height 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+.project h3 {
+    margin: 0.5rem 0;
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+.project .project-details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.project .project-details.expanded {
+    max-height: 15000px; /* Adjust this value as needed */
+}
+
+.project img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: opacity 0.3s ease;
+}
+
+.project p {
+    margin: 0.5rem 0;
+}
+
+.project:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.project:hover img {
+    opacity: 0.8;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.contact-icon {
+    display: inline-block;
+    width: 40px; /* Adjust size here */
+    height: 40px; /* Adjust size here */
+    border-radius: 50%;
+    background: #fff; /* Background color of the bubble */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    line-height: 40px; /* Center text vertically */
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.contact-icon img {
+    width: 100%; /* Set to 100% to scale within the parent */
+    height: 100%; /* Set to 100% to scale within the parent */
+    object-fit: contain; /* Maintain aspect ratio */
+}
+
+.contact-icon:hover {
+    background: #f0f0f0; /* Change background on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+@media (max-width: 768px) {
+    .contact-icons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-icon {
+        margin: 0.5rem 0;
+    }
+}
+
+.project-images {
+    display: flex;
+    gap: 1rem;
+}
+
+.project-images img {
+    flex: 1;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Optional: Add border-radius for rounded corners */
+}
+</style>
