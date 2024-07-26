@@ -4,18 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>James Henry</title>
-    <link rel="stylesheet" href="styles.css">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="james.css">
 </head>
 <body>
     <header>
         <h1>James Henry</h1>
-        <nav>
+        <!-- <nav>
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-        </nav>
+        </nav> -->
+
+        
+
     </header>
     <section id="about">
         <h2>About Me</h2>
@@ -46,8 +54,8 @@
             <div class="project-details">
                 <img src="smartcar.jpg" alt="Project 3">
                 <p>Designed a smart car using IR Sensors, Stepper Motors, a power supply circuit made of capacitors
-                to smooth the noisy voltage signals, and TM4C Microcontroller programming in C. The robot functions similar to a 
-                micromouse and avoids hitting walls by turning when the IR sensor recieves an input signal.</p>
+                to smooth the noisy voltage signals, and TM4C Microcontroller programming in C. The line functions similar to a 
+                micromouse and avoids hitting walls.</p>
             </div>
         </div>
         <div class="project">
@@ -110,193 +118,6 @@
             projectDetails.classList.toggle('expanded');
         }
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 </html>
-<style>
-    * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background: #f4f4f4;
-    color: #333;
-}
-
-header {
-    background: #333;
-    color: #fff;
-    padding: 1rem;
-    position: sticky;
-    top: 0;
-    width: 100%;
-}
-
-header {
-    background: #333;
-    color: #fff;
-    padding: 1rem;
-    position: sticky;
-    top: 0;
-    width: 100%;
-    background-image: url('stars.png'); /* Add star background image */
-    background-size: cover;
-    animation: blink-stars 1.5s infinite alternate; /* Apply animation */
-}
-
-header h1 {
-    margin: 0;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-}
-
-nav ul li {
-    margin: 0 1rem;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-section {
-    padding: 2rem;
-    max-width: 800px;
-    margin: auto;
-}
-
-.project {
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 1.5rem;
-    overflow: hidden;
-    transition: max-height 0.3s ease, transform 0.3s ease;
-    cursor: pointer;
-}
-
-.project h3 {
-    margin: 0.5rem 0;
-    font-size: 1.25rem;
-    cursor: pointer;
-}
-
-.project .project-details {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-}
-
-.project .project-details.expanded {
-    max-height: 15000px; /* Adjust this value as needed */
-}
-
-.project img {
-    display: block;
-    width: 100%;
-    height: auto;
-    transition: opacity 0.3s ease;
-}
-
-.project p {
-    margin: 0.5rem 0;
-}
-
-.project:hover {
-    transform: scale(1.02);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-.project:hover img {
-    opacity: 0.8;
-}
-
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul li {
-        margin: 0.5rem 0;
-    }
-}
-
-.contact-icons {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 1rem;
-}
-
-.contact-icon {
-    display: inline-block;
-    width: 40px; /* Adjust size here */
-    height: 40px; /* Adjust size here */
-    border-radius: 50%;
-    background: #fff; /* Background color of the bubble */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    line-height: 40px; /* Center text vertically */
-    transition: background 0.3s ease, transform 0.3s ease;
-}
-
-.contact-icon img {
-    width: 100%; /* Set to 100% to scale within the parent */
-    height: 100%; /* Set to 100% to scale within the parent */
-    object-fit: contain; /* Maintain aspect ratio */
-}
-
-.contact-icon:hover {
-    background: #f0f0f0; /* Change background on hover */
-    transform: scale(1.1); /* Slightly enlarge on hover */
-}
-
-@media (max-width: 768px) {
-    .contact-icons {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .contact-icon {
-        margin: 0.5rem 0;
-    }
-}
-
-.project-images {
-    display: flex;
-    gap: 1rem;
-}
-
-.project-images img {
-    flex: 1;
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px; /* Optional: Add border-radius for rounded corners */
-}
-</style>
