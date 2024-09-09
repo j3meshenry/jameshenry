@@ -11,36 +11,29 @@ body {
     color: #333;
 }
 
-header {
-    background: #333;
-    color: #fff;
-    padding: 1rem;
-    position: sticky;
-    top: 0;
-    width: 100%;
-}
-
 header h1 {
     margin: 0;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
+.navbar {
+    background: #f8f9fa; /* Lighter background color */
+    width: 100%;
+}
+.container-fluid {
+    width: 100%;
+    padding: 0;
 }
 
-nav ul li {
-    margin: 0 1rem;
+.navbar-brand {
+    flex-grow: 1;
 }
 
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
+.navbar-nav .nav-link {
+    color: #333; /* Darker text color */
 }
 
-nav ul li a:hover {
-    text-decoration: underline;
+.navbar-nav .nav-link:hover {
+    color: #007bff; /* Color for hover effect */
 }
 
 section {
@@ -72,7 +65,7 @@ section {
 }
 
 .project .project-details.expanded {
-    max-height: 15000px; /* Adjust this value as needed */
+    max-height: 15000px;
 }
 
 .project img {
@@ -93,6 +86,52 @@ section {
 
 .project:hover img {
     opacity: 0.8;
+}
+
+#skills {
+    padding: 2rem;
+    text-align: center;
+    background-color: #f8f9fa;
+}
+
+.skills-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.skill-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.skill-card p {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.skill-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.skill-card:hover img {
+    transform: rotate(10deg);
 }
 
 footer {
@@ -129,25 +168,25 @@ html {
 
 .contact-icon {
     display: inline-block;
-    width: 40px; /* Adjust size here */
-    height: 40px; /* Adjust size here */
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    background: #fff; /* Background color of the bubble */
+    background: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    line-height: 40px; /* Center text vertically */
+    line-height: 40px;
     transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .contact-icon img {
-    width: 100%; /* Set to 100% to scale within the parent */
-    height: 100%; /* Set to 100% to scale within the parent */
-    object-fit: contain; /* Maintain aspect ratio */
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .contact-icon:hover {
-    background: #f0f0f0; /* Change background on hover */
-    transform: scale(1.1); /* Slightly enlarge on hover */
+    background: #f0f0f0;
+    transform: scale(1.1);
 }
 
 @media (max-width: 768px) {
@@ -161,14 +200,29 @@ html {
     }
 }
 
+.project-details {
+    position: relative;
+    overflow: hidden;
+}
+
 .project-images {
     display: flex;
     gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .project-images img {
-    flex: 1;
+    flex: 1 1 auto;
     max-width: 100%;
-    height: auto;
-    border-radius: 8px; /* Optional: Add border-radius for rounded corners */
+    border-radius: 8px;
+}
+
+.project-description {
+    background: #f9f9f9;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.project-description p {
+    margin: 0;
 }
